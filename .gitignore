@@ -1,2 +1,5 @@
 # ignore ALL .yaml files
 *.yaml
+
+# ignore ALL .exe files
+*.exe
