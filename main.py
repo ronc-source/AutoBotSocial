@@ -110,7 +110,7 @@ def uploadToInstagram(post):
     print("Container Status Final Status:", containerStatus)
 
     # Publish media container
-    url = "https://graph.instagram.com/v21.0/" + instagramID + "/media_publish"
+    url = f"{APIurl}/{instagramID}/media_publish"
     data = {
         "creation_id" : containerID,
         "access_token" : accessToken
