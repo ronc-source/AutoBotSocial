@@ -47,7 +47,7 @@ def redditInstance():
 
 def findandDownloadLatestVideoPost(redditAccess):
     subredditAccess = redditAccess.subreddit(SUBREDDIT)
-    for post in subredditAccess.hot(limit=10):
+    for post in subredditAccess.hot(limit=100):
         if post.is_video and post.media:
             duration = post.media['reddit_video']['duration']
             if duration < MAX_VID_DURATION:
