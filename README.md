@@ -50,7 +50,7 @@ You will also need to create the following apps to get the required API credenti
 
 ### Installation
 
-_Please make sure to pip install all required libraries specified at the header of the main.py file.
+_Please make sure to pip install all required libraries specified at the header of the main.py file._
 
 1. Clone the repo
    ```sh
