@@ -49,8 +49,9 @@ def findandDownloadLatestVideoPost(redditAccess):
     subredditAccess = redditAccess.subreddit(SUBREDDIT)
     for post in subredditAccess.hot(limit=100):
         if post.is_video and post.media:
+            hasAudio = post.media['reddit_video']['has_audio']
             duration = post.media['reddit_video']['duration']
-            if duration < MAX_VID_DURATION:
+            if duration < MAX_VID_DURATION and hasAudio == True:
                 # Remove special characters from post name
                 filterPostTitle = ''.join(i for i in post.title if i.isalnum() or i == " ")
                 print(f"Found video titled: {filterPostTitle}")
